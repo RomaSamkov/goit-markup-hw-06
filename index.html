@@ -379,15 +379,34 @@
             </div>
         </footer> 
     <!--Модалка-->
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <button type="button" class="modal-button" data-modal-close>
-                    <svg class="close-link" width="18" height="18">
-                        <use href="./images/icons.svg#icon-close"></use>
-                    </svg>
-                </button>
-            </div>
+    <div class="backdrop " data-modal>
+        <div class="modal">
+            <button type="button" class="modal-button" data-modal-close>
+                <svg class="close-link" width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="#" class="form">
+                <div class="modal-field">
+                    <label for="name" class="label-text">Имя</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder=" ">
+                </div>
+                <div class="modal-field">
+                    <label for="tel" class="label-text">Телефон</label>
+                    <input type="tel" id="tel" name="tel" class="form-input" placeholder=" ">
+                </div>
+                <div class="modal-field">
+                    <label for="email" class="label-text">Почта</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder=" ">
+                </div>
+                <div class="modal-field">
+                    <label for="comments" class="label-text">Комментарий</label>
+                    <textarea name="comments" id="comments" class="form-comments" placeholder="Введите текст"></textarea>
+                </div>
+            </form>
         </div>
-        <script src="./js/modal.js"></script>
+    </div>
+        <!-- <script src="./js/modal.js"></script> -->
 </body>
 </html>
