@@ -208,12 +208,12 @@ body {
   text-align: center;
   justify-content: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   letter-spacing: 0.06em;
   min-width: 200px;
   min-height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 32px;
@@ -232,6 +232,7 @@ body {
 .hero-button:focus {
   color: var(--primery-white-color);
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* --------------Студия main section----------- */
 .bg-benefits {
@@ -741,6 +742,11 @@ body {
 }
 .close-link {
   fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-link:hover,
+.close-link:focus {
+  fill: var(--accent-color);
 }
 .modal-title {
   margin-bottom: 30px;
@@ -761,6 +767,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-comments {
   width: 100%;
@@ -769,6 +776,8 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-comments::placeholder {
   font-weight: 400;
@@ -778,8 +787,11 @@ body {
 
   color: rgba(117, 117, 117, 0.5);
 }
+.form-comments:focus {
+  border-color: var(--accent-color);
+}
 .label-text {
-  display: block;
+  display: inline-block;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -800,7 +812,7 @@ body {
   margin: 0 auto;
   width: 200px;
   height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -810,8 +822,16 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--primery-white-color);
   background: #188ce8;
+}
+.button-send:hover,
+.button-send:focus {
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .form-wrap {
   position: relative;
@@ -822,24 +842,11 @@ body {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .modal-icon {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: 15px;
-  transform: translateY(100%);
-}
-.form-input {
-  position: relative;
-  display: block;
-  padding-left: 42px;
-}
-
 .form-input:focus {
-  color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.form-input:focus + .modal-icon {
+.form-input:focus + .form-icon {
   fill: var(--accent-color);
-} */
+}
