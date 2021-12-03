@@ -756,9 +756,8 @@ body {
 .form-input {
   width: 100%;
   height: 40px;
-
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 42px;
+  padding-right: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -814,10 +813,17 @@ body {
   color: var(--primery-white-color);
   background: #188ce8;
 }
-.icon {
+.form-wrap {
   position: relative;
 }
-.modal-person {
+.form-icon {
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* .modal-icon {
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -834,6 +840,6 @@ body {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.form-input:focus + .modal-person {
+.form-input:focus + .modal-icon {
   fill: var(--accent-color);
-}
+} */
