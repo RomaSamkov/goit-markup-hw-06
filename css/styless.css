@@ -214,6 +214,7 @@ body {
   letter-spacing: 0.06em;
   min-width: 200px;
   min-height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 32px;
@@ -749,7 +750,7 @@ body {
   fill: var(--accent-color);
 }
 .modal-title {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -791,7 +792,7 @@ body {
   border-color: var(--accent-color);
 }
 .label-text {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -803,10 +804,9 @@ body {
 .modal-field {
   margin-bottom: 10px;
 }
-
-/* .form-input:placeholder-shown {
-  border-color: var(--accent-color);
-} */
+.modal-field:nth-last-of-type(2) {
+  margin-bottom: 20px;
+}
 .button-send {
   display: block;
   margin: 0 auto;
@@ -826,11 +826,11 @@ body {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--primery-white-color);
-  background: #188ce8;
+  background: var(--accent-color);
 }
 .button-send:hover,
 .button-send:focus {
-  background: var(--accent-color);
+  background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .form-wrap {
@@ -849,4 +849,43 @@ body {
 }
 .form-input:focus + .form-icon {
   fill: var(--accent-color);
+}
+.check-text {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.policy-link {
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 2px;
+  border: 2px solid var(--title-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-icon {
+  fill: var(--primery-white-color);
+}
+.modal-check:checked + .check-text .check-item {
+  background-color: var(--accent-color);
+  border: none;
 }
