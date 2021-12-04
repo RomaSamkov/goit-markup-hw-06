@@ -808,8 +808,8 @@ body {
   fill: #000000;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-link:hover,
-.close-link:focus {
+.modal-button:hover .close-link,
+.modal-button:focus .close-link {
   fill: var(--accent-color);
 }
 .modal-title {
@@ -951,4 +951,7 @@ body {
 .modal-check:checked + .check-text .check-item {
   background-color: var(--accent-color);
   border: none;
+}
+.modal-check:focus + .check-text .check-item {
+  border-color: var(--accent-color);
 }
